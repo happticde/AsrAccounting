@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 
 namespace AsrAccounting.Model.Entity {
-    public class AsrOrder {
+    public class AsrInvoice {
         private int id;
         private string title;
-        private DateTime orderDate;
+        private DateTime invoiceDate;
         private AsrCustomer customer;
-        private List<AsrOrderLine> orderLines;
+        private List<AsrInvoiceLine> invoiceLines;
         private double totalNetAmount;
         private double totalVatAmount;
         private double totalGrossAmount;
@@ -32,13 +32,13 @@ namespace AsrAccounting.Model.Entity {
             }
         }
 
-        public List<AsrOrderLine> OrderLines {
+        public List<AsrInvoiceLine> OrderLines {
             get {
-                return orderLines;
+                return invoiceLines;
             }
 
             set {
-                orderLines = value;
+                invoiceLines = value;
             }
         }
 
@@ -82,13 +82,13 @@ namespace AsrAccounting.Model.Entity {
             }
         }
 
-        public DateTime OrderDate {
+        public DateTime InvoiceDate {
             get {
-                return orderDate;
+                return invoiceDate;
             }
 
             set {
-                orderDate = value;
+                invoiceDate = value;
             }
         }
     }

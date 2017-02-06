@@ -1,5 +1,5 @@
 ﻿namespace AsrAccounting.Model.Entity {
-    public class AsrOrderLine {
+    public class AsrInvoiceLine {
         private int id;
         private AsrLineAction lineAction;
         private int quantity;
