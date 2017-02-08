@@ -32,7 +32,7 @@ namespace AsrAccounting.Model.Entity {
             }
         }
 
-        public List<AsrInvoiceLine> OrderLines {
+        public List<AsrInvoiceLine> InvoiceLines {
             get {
                 return invoiceLines;
             }

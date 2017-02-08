@@ -3,7 +3,7 @@
         private int id;
         private AsrLineAction lineAction;
         private int quantity;
-        private double amount;
+        private double unitPrice;
         private double lineAmount;
 
         public int Id {
@@ -36,13 +36,13 @@
             }
         }
 
-        public double Amount {
+        public double UnitPrice {
             get {
-                return amount;
+                return unitPrice;
             }
 
             set {
-                amount = value;
+                unitPrice = value;
             }
         }
 
