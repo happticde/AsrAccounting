@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsrAccounting", "AsrAccounting\AsrAccounting.csproj", "{DD84E513-C086-4FDF-9912-F1151DC5B406}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAsrAccounting", "TestAsrAccounting\TestAsrAccounting.csproj", "{F4988466-43EA-40D5-973D-6507D9C32D32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4988466-43EA-40D5-973D-6507D9C32D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4988466-43EA-40D5-973D-6507D9C32D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4988466-43EA-40D5-973D-6507D9C32D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4988466-43EA-40D5-973D-6507D9C32D32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
