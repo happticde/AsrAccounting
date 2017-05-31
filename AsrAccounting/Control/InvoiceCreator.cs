@@ -15,6 +15,8 @@ namespace AsrAccounting.Control {
 
         }
 
+        //TEST Kommentar
+
         public AsrInvoice Invoice {
             get {
                 return invoice;
