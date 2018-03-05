@@ -78,9 +78,9 @@
   <ItemGroup>
     <Compile Include="Model\Entity\Address.cs" />
     <Compile Include="Model\Entity\Customer.cs" />
-    <Compile Include="Model\Entity\AsrLineAction.cs" />
-    <Compile Include="Model\Entity\AsrInvoice.cs" />
-    <Compile Include="Model\Entity\AsrInvoiceLine.cs" />
+    <Compile Include="Model\Entity\InvoiceLineDetail.cs" />
+    <Compile Include="Model\Entity\Invoice.cs" />
+    <Compile Include="Model\Entity\InvoiceLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

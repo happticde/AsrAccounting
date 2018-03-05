@@ -4,6 +4,7 @@
     /// Customer class to save information of customer
     /// </summary>
     public class Customer {
+
         /// <summary>
         /// Unique Id of a customer
         /// </summary>

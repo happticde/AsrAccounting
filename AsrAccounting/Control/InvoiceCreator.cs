@@ -7,14 +7,14 @@ using System.Globalization;
 
 namespace AsrAccounting.Control {
     public class InvoiceCreator {
-        private AsrInvoice invoice;
+        private Invoice invoice;
         private PdfContentByte contentByte;
 
-        public InvoiceCreator(AsrInvoice invoice) {
+        public InvoiceCreator(Invoice invoice) {
             Invoice = invoice;
         }
 
-        public AsrInvoice Invoice {
+        public Invoice Invoice {
             get {
                 return invoice;
             }
@@ -95,7 +95,7 @@ namespace AsrAccounting.Control {
             table.AddCell("Preis");
             table.AddCell("Gesamt");
 
-            foreach(AsrInvoiceLine line in invoice.InvoiceLines) {
+            foreach(InvoiceLine line in invoice.InvoiceLines) {
                 PdfPCell descriptionCell = new PdfPCell();
                 table.AddCell(Convert.ToString(line.Quantity));
                 table.AddCell(line.UnitPrice.ToString("C", cultureInfo));
