@@ -11,8 +11,7 @@ namespace AsrAccounting.Control {
         private PdfContentByte contentByte;
 
         public InvoiceCreator(AsrInvoice invoice) {
-            this.Invoice = invoice;
-
+            Invoice = invoice;
         }
 
         public AsrInvoice Invoice {
@@ -25,13 +24,13 @@ namespace AsrAccounting.Control {
             }
         }
 
-        public void generatePdf() {
-            Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+        public void GeneratePdf() {
+            Document doc = new Document(PageSize.A4, 10, 10, 42, 35);
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream("test.pdf", FileMode.Create));
 
             doc.Open();
 
-            this.contentByte = writer.DirectContent;
+            contentByte = writer.DirectContent;
 
             BaseFont font = BaseFont.CreateFont(
                 "c:\\windows\\fonts\\calibri.ttf", 
@@ -39,7 +38,7 @@ namespace AsrAccounting.Control {
                 BaseFont.NOT_EMBEDDED
             );
 
-            this.writeTextCenter(
+            writeTextCenter(
                 "Autoservice Rötha",
                 font,
                 24,
@@ -47,7 +46,7 @@ namespace AsrAccounting.Control {
                 PageSize.A4.Height - 50
             );
 
-            this.writeTextCenter(
+            writeTextCenter(
                 "Lackierung Autoglas",
                 font,
                 14,
@@ -55,7 +54,7 @@ namespace AsrAccounting.Control {
                 PageSize.A4.Height - 65
             );
 
-            this.writeTextRight(
+            writeTextRight(
                 "Inhaber: Folco Kahnt",
                 font,
                 12,
@@ -63,7 +62,7 @@ namespace AsrAccounting.Control {
                 PageSize.A4.Height - 80
             );
 
-            this.writeTextRight(
+            writeTextRight(
                 "Heinestr. 2a",
                 font,
                 12,
@@ -71,7 +70,7 @@ namespace AsrAccounting.Control {
                 PageSize.A4.Height - 90
             );
 
-            this.writeTextRight(
+            writeTextRight(
                 "04571 Rötha",
                 font,
                 12,

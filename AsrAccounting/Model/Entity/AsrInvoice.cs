@@ -6,11 +6,15 @@ namespace AsrAccounting.Model.Entity {
         private int id;
         private string title;
         private DateTime invoiceDate;
-        private AsrCustomer customer;
+        private Customer customer;
         private List<AsrInvoiceLine> invoiceLines;
         private double totalNetAmount;
         private double totalVatAmount;
         private double totalGrossAmount;
+
+        public AsrInvoice() {
+            this.invoiceLines = new List<AsrInvoiceLine>();
+        }
 
         public int Id {
             get {
@@ -22,7 +26,7 @@ namespace AsrAccounting.Model.Entity {
             }
         }
 
-        public AsrCustomer Customer {
+        public Customer Customer {
             get {
                 return customer;
             }
@@ -90,6 +94,14 @@ namespace AsrAccounting.Model.Entity {
             set {
                 invoiceDate = value;
             }
+        }
+
+        public void addInvoiceLine(AsrInvoiceLine invoiceLine) {
+            this.InvoiceLines.Add(invoiceLine);
+        }
+
+        public void removeInvoiceLine(AsrInvoiceLine invoiceLine) {
+            this.InvoiceLines.Remove(invoiceLine);
         }
     }
 }
