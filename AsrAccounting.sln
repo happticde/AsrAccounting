@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsrAccounting", "AsrAccounting\AsrAccounting.csproj", "{DD84E513-C086-4FDF-9912-F1151DC5B406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsrAccountingTest", "AsrAccountingTest\AsrAccountingTest.csproj", "{3D6E4BFA-01BA-4720-A05B-C77E839EEA5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsrAccountingUnitTest", "AsrAccountingUnitTest\AsrAccountingUnitTest.csproj", "{1267A8FE-EA38-497C-B621-3F5CFFA52342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,15 @@ Global
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD84E513-C086-4FDF-9912-F1151DC5B406}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D6E4BFA-01BA-4720-A05B-C77E839EEA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D6E4BFA-01BA-4720-A05B-C77E839EEA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D6E4BFA-01BA-4720-A05B-C77E839EEA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D6E4BFA-01BA-4720-A05B-C77E839EEA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1267A8FE-EA38-497C-B621-3F5CFFA52342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1267A8FE-EA38-497C-B621-3F5CFFA52342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1267A8FE-EA38-497C-B621-3F5CFFA52342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1267A8FE-EA38-497C-B621-3F5CFFA52342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABCEA7E1-0E8A-4229-A1D2-ACCD006697AF}
 	EndGlobalSection
 EndGlobal
