@@ -1,0 +1,26 @@
+﻿<Window x:Class="AsrAccounting.View.AsrWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:AsrAccounting.ViewModel"
+        xmlns:local="clr-namespace:AsrAccounting.View"
+        mc:Ignorable="d"
+        Title="AsrWindow" Height="720" Width="1280">
+    <Window.Resources>
+        <vm:AsrVM x:Key="asr"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource asr}">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Datei">
+                    <MenuItem Header="Neu"/>
+                    <MenuItem Header="Öffnen"/>
+                    <Separator/>
+                    <MenuItem Header="Beenden"
+                              Command="{Binding ExitCommand}"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>        
+    </Grid>
+</Window>
