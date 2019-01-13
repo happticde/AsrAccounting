@@ -10,17 +10,35 @@
     <Window.Resources>
         <vm:AsrVM x:Key="asr"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource asr}">
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Datei">
-                    <MenuItem Header="Neu"/>
-                    <MenuItem Header="Öffnen"/>
-                    <Separator/>
-                    <MenuItem Header="Beenden"
-                              Command="{Binding ExitCommand}"/>
-                </MenuItem>
-            </Menu>
-        </DockPanel>        
-    </Grid>
+    <DockPanel DataContext="{StaticResource asr}">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Neu"/>
+                <MenuItem Header="Öffnen"
+                          Command="{Binding OpenFileCommand}"/>
+                <Separator/>
+                <MenuItem Header="Beenden"
+                          Command="{Binding ExitCommand}"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding AsrFileInfo.FileLength}"/>
+        </StatusBar>
+        <Grid DockPanel.Dock="Left"
+              IsManipulationEnabled="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <TextBox Width="200"
+                         HorizontalAlignment="Left">                    
+                </TextBox>
+                <ListView Width="200"
+                          HorizontalAlignment="Left"
+                          Visibility="Collapsed">                    
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>
