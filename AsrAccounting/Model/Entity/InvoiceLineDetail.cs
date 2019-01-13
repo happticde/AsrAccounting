@@ -14,8 +14,23 @@
         public string Description { get; set; }
 
         /// <summary>
-        /// An amount which is filled by default
+        /// A net amount which is filled by default
         /// </summary>
-        public decimal DefaultAmount { get; set; }        
+        public decimal DefaultAmountNet { get; set; }
+
+        /// <summary>
+        /// A gross amount which is filled by default
+        /// </summary>
+        public decimal DefaultAmountGross { get; set; }
+
+        /// <summary>
+        /// A VAT amount which is filled by default
+        /// </summary>
+        public decimal DefaultAmountVAT { get; set; }
+
+        /// <summary>
+        /// A default VAT percentage value
+        /// </summary>
+        public ushort DefaultPercentageVAT { get; set; }
     }
 }

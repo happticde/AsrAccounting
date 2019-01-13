@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AsrAccounting.Model.Entity {
     /// <summary>
@@ -68,6 +69,38 @@ namespace AsrAccounting.Model.Entity {
         /// <param name="invoiceLine">An invoice line object you want to remove from list</param>
         public void RemoveInvoiceLine(InvoiceLine invoiceLine) {
             InvoiceLines.Remove(invoiceLine);
+        }
+
+        /// <summary>
+        /// Function to retrieve the sum of TotalAmountNet values from the 
+        /// invoice lines
+        /// </summary>
+        /// <returns>Sum of TotalAmountNet values</returns>
+        public decimal GetTotalAmountNet() {
+            if(InvoiceLines.Count > 0) {
+                return (                    
+                    from i in InvoiceLines
+                    select i.LineAmountNet
+                ).Sum();
+            } else {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Function to retrieve the sum of TotalAmountGross values from the 
+        /// invoice lines
+        /// </summary>
+        /// <returns>Sum of TotalAmountNet values</returns>
+        public decimal GetTotalAmountGross() {
+            if(InvoiceLines.Count > 0) {
+                return (
+                    from i in InvoiceLines
+                    select i.LineAmountGross
+                ).Sum();
+            } else {
+                return 0;
+            }
         }
     }
 }

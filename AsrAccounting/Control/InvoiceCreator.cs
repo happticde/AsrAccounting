@@ -27,7 +27,7 @@ namespace AsrAccounting.Control {
         public void GeneratePdf() {
             Document doc = new Document(PageSize.A4, 10, 10, 42, 35);
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream("test.pdf", FileMode.Create));
-
+            Console.WriteLine();
             doc.Open();
 
             contentByte = writer.DirectContent;
@@ -99,7 +99,7 @@ namespace AsrAccounting.Control {
                 PdfPCell descriptionCell = new PdfPCell();
                 table.AddCell(Convert.ToString(line.Quantity));
                 table.AddCell(line.UnitPrice.ToString("C", cultureInfo));
-                table.AddCell(line.LineAmount.ToString("C", cultureInfo));
+                table.AddCell(line.LineAmountGross.ToString("C", cultureInfo));
             }
 
             return table;

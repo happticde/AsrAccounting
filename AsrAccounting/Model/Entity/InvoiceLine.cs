@@ -17,7 +17,7 @@
         /// <summary>
         /// Quantity of the action
         /// </summary>
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } = 1;
 
         /// <summary>
         /// Single unit price of the line
@@ -25,8 +25,28 @@
         public decimal UnitPrice { get; set; }
 
         /// <summary>
-        /// Sum amount of the line
+        /// Sum net amount of the invoice line
         /// </summary>
-        public decimal LineAmount { get; set; }
+        public decimal LineAmountNet { get; set; }
+
+        /// <summary>
+        /// Sum gross amount of the invoice line
+        /// </summary>
+        public decimal LineAmountGross { get; set; }
+
+        /// <summary>
+        /// Sum VAT amount of the invoice line
+        /// </summary>
+        public decimal LineAmountVAT { get; set; }
+
+        /// <summary>
+        /// Value of VAT percentage
+        /// </summary>
+        public byte PercentageVAT { get; set; }
+
+        private InvoiceLine(byte percentageVAT, decimal amountNet, decimal amountGross) {
+            
+        }
+
     }
 }
